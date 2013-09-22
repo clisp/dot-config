@@ -1,0 +1,89 @@
+############################################################
+# Settings for screen
+#
+# Copyright (C) 2009, 2010, 2011, 2012 Dylan.Wen
+#
+# Author: Dylan.Wen <hhkbp2@gmail.com>
+#
+# Time-stamp: <2013-02-02 21:47>
+#
+# This file is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this file.  If not, see <http://www.gnu.org/licenses/>.
+#
+############################################################
+
+
+# 关闭启动画面
+startup_message off		# default: on
+
+# Automatically detach on hangup, or the screen will keep eating
+# your memory after the terminal emulator has been terminated.
+autodetach on      # default: on
+
+# 关闭vbell
+vbell off
+
+# 指定 shell
+shell bash
+
+# 默认开始路径为~
+# chdir
+
+# 定义回滚行数
+defscrollback 1000
+
+# 指定编码
+defencoding utf-8
+encoding utf-8 utf-8
+
+# 定制 caption
+# backtick 47 0 0 my_name.sh
+# caption always "%?%F%{-b 4w}%:%{-b bb}%? %H | %l | %m-%d %c |%?%F%{-b 4w}%?%L=%-Lw%45>%{-b w4}%n%f* %t%{-}%+Lw%-0<"
+# caption always "%{=b}%{b}%{uB C}%47`%{-}%{B C}:%{-}  %-Lw%{u .my}%50>%n%f* %t%{-}%+Lw%< %=%{b km}%m-%d %c %D"
+
+caption always "%{=b}%{b}%{C}%H%{-}  %+010=%-w%8L>%{uB .my}*%n %t%{-}%+w%-014<  %-012=%{b m}%m-%d %c "
+
+# hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+
+# 定制 title bar
+term rxvt
+
+# termcapinfo xterm|rxvt ti@:te@
+# termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+termcapinfo rxvt 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+
+########## 键绑定 ##########
+
+# 将快捷键默认 C-a 设为 C-l
+escape ^L^L
+
+# 定制 region 函数键与Emacs一致
+bind 2 split
+bind o focus
+bind 1 only
+bind 0 remove
+
+# bind F9 to create a new screen
+bindkey -k k9 screen
+# bind F10 to kill current screen window
+bindkey -k k; kill
+
+# bind F5 to detach screen session
+bindkey -k k5 detach
+# bind F11 to "move to previous window"
+bindkey -k F1 prev
+# bind F12 to "move to next window"
+bindkey -k F2 next
+
+
+# .screenrc ends here

@@ -1,0 +1,28 @@
+!!
+!! Swap Caps_Lock and Control_L
+!!
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
+!!
+!!
+!! Change Pause to Del
+!! but, it doesn't work...
+!!
+!remove Control = Pause
+!keysym Pause = Delete
+!add Control = Pause
+!!
+!! 
+!! Swap Backspace and back slash
+!!
+!! not working
+!keysym BackSpace = backslash
+!keysym backslash = BackSpace
+!!
+!! working
+keycode 51 = BackSpace
+keycode 22 = backslash bar
