@@ -1,0 +1,12 @@
+%% ---
+%%  Dot erlang file of Dylan.Wen
+%%
+%%  Copyright (C) 2012 Dylan.Wen
+%%
+%%  Author: Dylan.Wen <hhkbp2@gmail.com>
+%%  Time-stamp: <2013-02-02 21:47>
+%%---
+
+io:format("Hey, erlang running~n").
+%code:add_patha("/home/dylan/program/erlang/code").
+%code:get_path().
